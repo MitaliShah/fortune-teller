@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+  max-width: 40em;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3em;
+}
