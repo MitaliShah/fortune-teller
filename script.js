@@ -28,13 +28,32 @@ var answers = [
   "Very doubtful.",
 ];
 
-//Event Listeners
+// Randomly shuffle an array
+let shuffle = function (array) {
+  let currentIndex = array.length;
+  let temporaryValue, randomIndex;
+
+  while (0 !== currentIndex) {
+    // Pick a remaining element
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // Swap with current element
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+};
+
+// Event Listeners
 
 let submitHandler = function (event) {
-  //prevent form from reload
+  // prevent form from reload
   event.preventDefault();
 
-  //If there’s not a question to answer, return
+  // If there’s not a question to answer, return
   if (question.value.length < 1) return;
 };
 
