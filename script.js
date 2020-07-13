@@ -47,8 +47,16 @@ let shuffle = function (array) {
   return array;
 };
 
+// Get a random answer from the list
 let getAnswer = function () {
   return shuffle(answers.slice())[0];
+};
+
+// Sanitize HTML in a user submitted string
+let sanitizeHTML = function (string) {
+  let temp = document.createElement("div");
+  temp.textContent = string;
+  return temp.innerHTML;
 };
 
 // Event Listeners
