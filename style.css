@@ -9,4 +9,36 @@ body {
 h1 {
   text-align: center;
   font-size: 3em;
+  color: darkcyan;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: darkslategrey;
+}
+
+input {
+  width: 50%;
+  margin-top: 20px;
+}
+
+button {
+  width: 40%;
+  margin-top: 20px;
+  color: darkslategrey;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+#answer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  color: blueviolet;
 }

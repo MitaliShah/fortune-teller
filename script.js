@@ -69,9 +69,9 @@ let submitHandler = function (event) {
   if (question.value.length < 1) return;
 
   // Display the answer
-  answer.innerHTML = `<p><strong>${sanitizeHTML(
+  answer.innerHTML = `<p>Question: <strong>${sanitizeHTML(
     question.value
-  )}</strong></p><p>${getAnswer()}</p>`;
+  )}</strong></p><p>Answer: ${getAnswer()}</p>`;
 
   // Clear the question field
   question.value = "";
