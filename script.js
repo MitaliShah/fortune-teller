@@ -47,6 +47,10 @@ let shuffle = function (array) {
   return array;
 };
 
+let getAnswer = function () {
+  return shuffle(answers.slice())[0];
+};
+
 // Event Listeners
 
 let submitHandler = function (event) {
@@ -55,6 +59,9 @@ let submitHandler = function (event) {
 
   // If there’s not a question to answer, return
   if (question.value.length < 1) return;
+
+  // Display the answer
+  answer.innerHTML = `<p>${getAnswer()}</p>`;
 };
 
 form.addEventListener("submit", submitHandler, false);
