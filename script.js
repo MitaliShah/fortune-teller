@@ -72,6 +72,9 @@ let submitHandler = function (event) {
   answer.innerHTML = `<p><strong>${sanitizeHTML(
     question.value
   )}</strong></p><p>${getAnswer()}</p>`;
+
+  // Clear the question field
+  question.value = "";
 };
 
 form.addEventListener("submit", submitHandler, false);
