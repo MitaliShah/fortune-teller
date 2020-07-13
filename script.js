@@ -69,7 +69,9 @@ let submitHandler = function (event) {
   if (question.value.length < 1) return;
 
   // Display the answer
-  answer.innerHTML = `<p>${getAnswer()}</p>`;
+  answer.innerHTML = `<p><strong>${sanitizeHTML(
+    question.value
+  )}</strong></p><p>${getAnswer()}</p>`;
 };
 
 form.addEventListener("submit", submitHandler, false);
