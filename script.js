@@ -75,6 +75,7 @@ let submitHandler = function (event) {
 
   // Clear the question field
   question.value = "";
+  question.focus();
 };
 
 form.addEventListener("submit", submitHandler, false);
